@@ -53,12 +53,9 @@ selectionPopup.addEventListener("click", async (e) => {
     translationPopup.style.left = `${e.pageX + 10}px`;
     translationPopup.style.top = `${e.pageY + 10}px`;
 
-    chrome.storage.local.get("sourceLang", (result) =>{
-        if (result.sourceLang) sourceLang = result.sourceLang;
-    });
-    chrome.storage.local.get("targetLang", (result) =>{
-        if (result.targetLang) targetLang = result.targetLang;
-    })
+    const stored = await chrome.storage.local.get(["sourceLang", "targetLang"]);
+    if (stored.sourceLang) sourceLang = stored.sourceLang;
+    if (stored.targetLang) targetLang = stored.targetLang;
     const result = await myMemoTranslate(lastSelectedText, sourceLang, targetLang);
     translationPopup.textContent = result;
     translationPopup.style.display = "block";
