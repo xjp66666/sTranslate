@@ -1,0 +1,25 @@
+{
+  "name": "stranslate",
+  "version": "1.0.0",
+  "description": "a easy and simple to use translation extenstion for chrome",
+  "homepage": "https://github.com/xjp66666/sTranslate#readme",
+  "bugs": {
+    "url": "https://github.com/xjp66666/sTranslate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xjp66666/sTranslate.git"
+  },
+  "license": "GPL-3.0",
+  "author": "Jason Liang",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "globals": "^17.7.0"
+  }
+}
